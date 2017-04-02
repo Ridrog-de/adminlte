@@ -32,3 +32,10 @@ to the providers array @ config/app.php
     ...
  ],
 ```
+
+**Use the view**
+
+
+-------------
+
+test composer autoupdate
