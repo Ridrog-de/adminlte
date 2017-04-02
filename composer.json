@@ -1,0 +1,17 @@
+{
+  "name": "ridrog/adminlte",
+  "description": "AdminLte for Laravel",
+  "type": "package",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable" : true,
+  "require": {
+    "almasaeed2010/adminlte": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ridrog\\AdminLte\\": "src/"
+    }
+  }
+
+}
