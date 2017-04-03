@@ -28,13 +28,16 @@ to the providers array @ config/app.php
 ```
 'providers' => [
     ...
-    Ridrog\Adminarea\AdminLteServiceProvider::class,
+    Ridrog\AdminLte\AdminLteServiceProvider::class,
     ...
  ],
 ```
 
 **Use the view**
 
+```
+adminlte::dashboard
+```
 
 -------------
 

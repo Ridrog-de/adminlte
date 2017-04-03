@@ -69,7 +69,7 @@ return [
 
     'footer' => true,
 
-
+    /*
     'links' => [
         'Test' => [
             'treeview' => false,
@@ -107,4 +107,5 @@ return [
             ]
         ],
     ],
+    */
 ];
