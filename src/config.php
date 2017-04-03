@@ -69,6 +69,10 @@ return [
 
     'footer' => true,
 
+    'links' => [
+
+    ]
+
     /*
     'links' => [
         'Test' => [
