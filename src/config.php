@@ -32,6 +32,11 @@ return [
         'mix_file' => '/admin.js'
     ],
 
+    /*
+     * What is displayed as header for the mainnav
+     */
+    'navi_title' => 'Main Navigation',
+
     'logo' => [
         'text' => 'AdminLTE',
         'text_small' => 'ALT',
