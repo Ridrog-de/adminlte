@@ -3,13 +3,32 @@
 return [
 
     'style' => [
+        /*
+         * Mix your own CSS file
+         */
         'mix' => false,
+
+        /*
+         * Name of your own CSS File
+         */
         'mix_file' => '/admin.css',
+
+        /*
+         * The Skin
+         * black | black-light | blue | blue-light | green | green-light | purple | purple-light | red | red-light | yellow | yellow-light
+         */
         'skin' => 'blue'
     ],
 
     'script' => [
+        /*
+         * Mix your own JS file
+         */
         'mix' => false,
+
+        /*
+         * Name of your own JS File
+         */
         'mix_file' => '/admin.js'
     ],
 
@@ -20,39 +39,36 @@ return [
     ],
 
     'layout' => [
-        'sidebar-collapse' => false,     // sidebar-collapse
-        'sidebar-mini' => true,         // sidebar-mini
-        'fixed' => false,               // fixed        !need slimscroll plugin
-        'boxed' => false,               // layout-boxed,
-        'top-nav' => false,              // layout-top-nav
+
+        /*
+         * The sidebar is collapsed at pageload
+         */
+        'sidebar-collapse' => false,
+
+        /*
+         * The sidebar shows only the icons if collapsed
+         */
+        'sidebar-mini' => true,
+
+        /*
+         * Fixed Layout (need slimscroll plugin)
+         */
+        'fixed' => false,
+
+        /*
+         * Boxed Layout
+         */
+        'boxed' => false,
+
+        /*
+         * Layout with Top Nav
+         */
+        'top-nav' => false,
     ],
 
-    'plugins' => [
-        'bootstrap-slider' => true,
-        'bootstrap-wysihtml5' => true,
-        'chartjs' => true,
-        'ckeditor' => true,
-        'colorpicker' => true,
-        'datatables' => true,
-        'datepicker' => true,
-        'daterangepicker' => true,
-        'fastclick' => true,
-        'flot' => true,
-        'fullcalendar' => true,
-        'iCheck' => true,
-        'input-mask' => true,
-        'ionslider' => true,
-        'jQueryUI' => true,
-        'jvectormap' => true,
-        'knob' => true,
-        'morris' => true,
-        'pace' => true,
-        'select2' => true,
-        'slimScroll' => true,
-        'sparkline' => true,
-        'timepicker' => true,
-    ],
-
+    /*
+     * Hides/Show the various items in the topmenu
+     */
     'topmenu' => [
         'messages' => true,
         'notifications' => true,
@@ -61,14 +77,23 @@ return [
         'controlBarToggle' => true,
     ],
 
+    /*
+     * Hides/Show the various items in the sidebar
+     */
     'mainmenu' => [
         'searchform' => true,
         'userpanel' => true,
         'mainnavigation' => true
     ],
 
+    /*
+     * Hides/Show the footer
+     */
     'footer' => true,
 
+    /*
+     * Links for the mainnav see example below
+     */
     'links' => [
 
     ]

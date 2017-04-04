@@ -61,3 +61,5 @@ or extend the adminlte master template
 **Publish the config**  
 ``` php artisan vendor:publish --tag=adminlte-config ```
 
+And take a look, most should be clear
+
