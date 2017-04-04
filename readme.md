@@ -39,6 +39,25 @@ to the providers array @ config/app.php
 adminlte::dashboard
 ```
 
--------------
+or extend the adminlte master template
 
-test composer autoupdate
+``` 
+@extends('adminlte::layout.adminlte')
+
+@section('content-header')
+    <h1>Hello World</h1>
+@endsection
+
+@section('content')
+    <p>
+        Some Content here ...
+    </p>
+@endsection
+
+```
+
+## Customize
+
+**Publish the config**  
+``` php artisan vendor:publish --tag=adminlte-config ```
+

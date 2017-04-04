@@ -16,7 +16,7 @@ class AdminLteServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/Views', 'adminlte');
 
         $this->publishes([
-            __DIR__.'/config.php' => config_path('adminarea/adminlte.php'),
+            __DIR__.'/config.php' => config_path('adminlte.php'),
         ], 'adminlte-config');
 
         $this->publishes([
