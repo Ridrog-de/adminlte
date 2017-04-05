@@ -1,5 +1,13 @@
-@extends('adminlte::layout.adminlte')
+@extends('adminlte::default')
 
+@section('meta')
+
+@endsection
+
+
+@section('styles')
+
+@endsection
 
 @section('content-header')
     <h1>
@@ -20,3 +28,29 @@
     </div>
 </div>
 @endsection
+
+
+@section('scripts')
+
+@endsection
+
+@push('top-nav')
+
+@endpush
+
+@push('top-nav-right')
+
+@endpush
+
+@push('footer')
+
+@endpush
+
+@push('sidebar-top')
+
+@endpush
+
+@push('sidebar-bottom')
+
+@endpush
+

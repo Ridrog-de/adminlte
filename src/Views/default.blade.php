@@ -6,6 +6,8 @@
     <title>Adminarea | Dashboard</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
+    @yield('meta')
+
     @if(config('adminlte.style.mix'))
 
         <link rel="stylesheet" href="{{config('adminlte.style.mix_file')}}">
@@ -21,25 +23,27 @@
 
     @endif
 
+    @yield('styles')
+
 </head>
 <body class="hold-transition skin-{{config('adminlte.style.skin')}}
 
-    @if(config('adminlte.layout.sidebar-collapse'))
+@if(config('adminlte.layout.sidebar-collapse'))
         sidebar-collapse
     @endif
 
-    @if(config('adminlte.layout.sidebar-mini'))
+@if(config('adminlte.layout.sidebar-mini'))
         sidebar-mini
     @endif
 
-    @if(config('adminlte.layout.top-nav'))
+@if(config('adminlte.layout.top-nav'))
         layout-top-nav
     @endif
 
-    @if(config('adminlte.layout.boxed'))
+@if(config('adminlte.layout.boxed'))
         layout-boxed
     @endif
-">
+        ">
 <div class="wrapper">
 
     <header class="main-header">
@@ -65,12 +69,12 @@
     </div>
     <!-- /.content-wrapper -->
     @if(config('adminlte.footer'))
-    <footer class="main-footer">
-        @include('adminlte::layout.footer')
-    </footer>
-    @endif
+        <footer class="main-footer">
+            @include('adminlte::layout.footer')
+        </footer>
+@endif
 
-    <!-- Control Sidebar -->
+<!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
         @include('adminlte::layout.controllbar')
     </aside>
@@ -92,5 +96,7 @@
     @include('adminlte::js.app')
 
 @endif
+
+@yield('scripts')
 </body>
 </html>

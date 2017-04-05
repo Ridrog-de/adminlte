@@ -1,5 +1,7 @@
 <div class="navbar-custom-menu">
     <ul class="nav navbar-nav">
+        @stack('top-nav-right')
+
         @if(config('adminlte.topmenu.messages'))
             @include('adminlte::layout.header.menu.messages')
         @endif
