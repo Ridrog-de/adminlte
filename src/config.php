@@ -16,6 +16,7 @@ return [
         /*
          * The Skin
          * black | black-light | blue | blue-light | green | green-light | purple | purple-light | red | red-light | yellow | yellow-light
+         * Always include the skin name, even if you load it with mix
          */
         'skin' => 'blue'
     ],
@@ -80,6 +81,13 @@ return [
         'tasks' => true,
         'userAccount' => true,
         'controlBarToggle' => true,
+        /*
+         * Custom Partials that get loaded into the topmenu section
+         * An Array of views => 'yourfolder.yourview'
+         */
+        'custom' => [
+
+        ]
     ],
 
     /*
@@ -88,18 +96,36 @@ return [
     'mainmenu' => [
         'searchform' => true,
         'userpanel' => true,
-        'mainnavigation' => true
+        'mainnavigation' => true,
+        /*
+         * Custom Partials that get loaded into the mainmenu section
+         * An Array of views => 'yourfolder.yourview'
+         */
+        'custom' => [
+
+        ]
     ],
 
     /*
      * Hides/Show the footer
      */
     'footer' => true,
+    'footer_custom' => [
+
+    ],
 
     /*
      * Links for the mainnav see example below
      */
     'links' => [
+
+    ],
+
+    /*
+         * Custom Partials that get loaded into the mainmenu->mainnavigation section
+         * An Array of views => 'yourfolder.yourview'
+         */
+    'custom_links' => [
 
     ]
 
