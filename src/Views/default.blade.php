@@ -68,11 +68,11 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    @if(config('adminlte.footer'))
+    @if(config('adminlte.footer.show'))
         <footer class="main-footer">
             @include('adminlte::layout.footer')
         </footer>
-@endif
+    @endif
 
 <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

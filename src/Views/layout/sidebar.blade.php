@@ -1,15 +1,12 @@
 <section class="sidebar">
     @stack('sidebar-top')
 
-    @if(config('adminlte.mainmenu.userpanel'))
-        @include('adminlte::layout.sidebar.userpanel')
-    @endif
+    @foreach(config('adminlte.sidebar') as $partial)
+        @include($partial)
+    @endforeach()
 
-    @if(config('adminlte.mainmenu.searchform'))
-        @include('adminlte::layout.sidebar.searchform')
-    @endif
 
-    @if(config('adminlte.mainmenu.mainnavigation'))
+    @if(config('adminlte.mainmenu.show'))
         @include('adminlte::layout.sidebar.mainnavigation')
     @endif
 

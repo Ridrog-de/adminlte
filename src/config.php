@@ -34,10 +34,8 @@ return [
     ],
 
     /*
-     * What is displayed as header for the mainnav
+     * Text and Link for Logo
      */
-    'navi_title' => 'Main Navigation',
-
     'logo' => [
         'text' => 'AdminLTE',
         'text_small' => 'ALT',
@@ -72,64 +70,92 @@ return [
         'top-nav' => false,
     ],
 
-    /*
-     * Hides/Show the various items in the topmenu
-     */
-    'topmenu' => [
-        'messages' => true,
-        'notifications' => true,
-        'tasks' => true,
-        'userAccount' => true,
-        'controlBarToggle' => true,
-        /*
-         * Custom Partials that get loaded into the topmenu section
-         * An Array of views => 'yourfolder.yourview'
-         */
-        'custom' => [
 
+    /*
+     * Components for the menu top right
+     * views/partials that get included
+     */
+    'topMenuRight' => [
+        'adminlte::components.topmenu.messages',
+        'adminlte::components.topmenu.notifications',
+        'adminlte::components.topmenu.tasks',
+        'adminlte::components.topmenu.userAccount',
+    ],
+
+    /*
+     * Components for the menu top left
+     * views/partials that get included
+     */
+    'topMenuLeft' => [
+            'adminlte::components.topmenu.messages',
+    ],
+
+    /*
+     * Control the Control Bar
+     * enable/disable it
+     * create your own Tab Menu and Tab Panes
+     */
+    'controlBar' => [
+        'enable' => true,
+        'toggle' => true,
+        'toggleName' => '',
+        'toggleIcon' => 'gears',
+        'tabsMenu' => 'adminlte::components.controlBar._menu',
+        'tabPanes' => [
+            'adminlte::components.controlBar.home',
+            'adminlte::components.controlBar.settings',
         ]
     ],
 
     /*
-     * Hides/Show the various items in the sidebar
+     * Components for the sidebar
+     * views/partials that get included
+     */
+    'sidebar' => [
+        'adminlte::components.sidebar.userpanel',
+        'adminlte::components.sidebar.searchform',
+    ],
+
+
+    /*
+     * Controll the mainmenu
+     * Show/hide it
+     * Use textbased links or include your custom partials or both
      */
     'mainmenu' => [
-        'searchform' => true,
-        'userpanel' => true,
-        'mainnavigation' => true,
-        /*
-         * Custom Partials that get loaded into the mainmenu section
-         * An Array of views => 'yourfolder.yourview'
-         */
-        'custom' => [
+        'show' => true,
+        'title' => 'Main Navigation',
+        'showLinks' => true,
+        'links' => [
+            'Test' => [
+                'treeview' => false,
+                'name' => 'test',
+                'route_name' => 'login',
+                'icon' => 'home'
+            ],
+        ],
+        'showPartials' => true,
+        'partials' => [
+            'adminlte::components.mainmenu.sample-links',
+        ]
 
+
+    ],
+
+    /*
+     * Control the Footer
+     */
+    'footer' => [
+        'show' => true,
+        'content' => [
+            'adminlte::components.footer.copyright'
         ]
     ],
 
-    /*
-     * Hides/Show the footer
-     */
-    'footer' => true,
-    'footer_custom' => [
-
-    ],
 
     /*
-     * Links for the mainnav see example below
-     */
-    'links' => [
-
-    ],
-
-    /*
-         * Custom Partials that get loaded into the mainmenu->mainnavigation section
-         * An Array of views => 'yourfolder.yourview'
-         */
-    'custom_links' => [
-
-    ]
-
-    /*
+     * Sample Links for "mainmenu=>links"
+     *
     'links' => [
         'Test' => [
             'treeview' => false,

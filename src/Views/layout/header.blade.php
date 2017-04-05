@@ -6,10 +6,7 @@
     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
     </a>
-    <ul class="nav navbar-nav">
-        @stack('top-nav')
-    </ul>
+    @include('adminlte::layout.header.topmenu-left')
 
-
-    @include('adminlte::layout.header.menu')
+    @include('adminlte::layout.header.topmenu-right')
 </nav>
