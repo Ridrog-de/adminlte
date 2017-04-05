@@ -42,7 +42,7 @@ adminlte::dashboard
 or extend the adminlte master template
 
 ``` 
-@extends('adminlte::layout.adminlte')
+@extends('adminlte::default')
 
 @section('content-header')
     <h1>Hello World</h1>
@@ -61,5 +61,22 @@ or extend the adminlte master template
 **Publish the config**  
 ``` php artisan vendor:publish --tag=adminlte-config ```
 
-And take a look, most should be clear
+And take a look, most should be clear.  
+Switch skins, hide/display various sections  
+....
 
+
+
+## Sections
+
+'meta', 'styles' and 'scripts'
+
+'content' and 'content-header'
+
+## Stacks
+
+- top-nav
+- top-nav-right
+- footer
+- sidebar-top
+- sidebar-bottom
