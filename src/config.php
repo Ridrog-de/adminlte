@@ -127,12 +127,7 @@ return [
         'title' => 'Main Navigation',
         'showLinks' => true,
         'links' => [
-            'Test' => [
-                'treeview' => false,
-                'name' => 'test',
-                'route_name' => 'login',
-                'icon' => 'home'
-            ],
+
         ],
         'showPartials' => true,
         'partials' => [
