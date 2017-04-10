@@ -1,7 +1,7 @@
 @extends('adminlte::default')
 
 @section('meta')
-
+    <title>Adminarea | Dashboard</title>
 @endsection
 
 
