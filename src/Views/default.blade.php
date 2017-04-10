@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ config('app.locale') }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Adminarea | Dashboard</title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @yield('meta')
+
+    @include('adminlte::layout.partials.csrf')
+
 
     @if(config('adminlte.style.mix'))
 
@@ -28,62 +30,82 @@
 </head>
 <body class="hold-transition skin-{{config('adminlte.style.skin')}}
 
-@if(config('adminlte.layout.sidebar-collapse'))
+    @if(config('adminlte.layout.sidebar-collapse'))
+
         sidebar-collapse
+
     @endif
 
-@if(config('adminlte.layout.sidebar-mini'))
+    @if(config('adminlte.layout.sidebar-mini'))
+
         sidebar-mini
+
     @endif
 
-@if(config('adminlte.layout.top-nav'))
+    @if(config('adminlte.layout.top-nav'))
+
         layout-top-nav
+
     @endif
 
-@if(config('adminlte.layout.boxed'))
+    @if(config('adminlte.layout.boxed'))
+
         layout-boxed
+
     @endif
-        ">
-<div class="wrapper">
+">
+<div class="wrapper" id="app">
 
     <header class="main-header">
+
         @include('adminlte::layout.header')
+
     </header>
-    <!-- Left side column. contains the logo and sidebar -->
+
     <aside class="main-sidebar">
+
         @include('adminlte::layout.sidebar')
+
     </aside>
 
-    <!-- Content Wrapper. Contains page content -->
+
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
+
         <section class="content-header">
+
             @yield('content-header')
+
         </section>
 
-        <!-- Main content -->
         <section class="content">
+
             @yield('content')
+
         </section>
-        <!-- /.content -->
+
     </div>
-    <!-- /.content-wrapper -->
+
     @if(config('adminlte.footer.show'))
+
         <footer class="main-footer">
+
             @include('adminlte::layout.footer')
+
         </footer>
+
     @endif
 
-<!-- Control Sidebar -->
+
     <aside class="control-sidebar control-sidebar-dark">
+
         @include('adminlte::layout.controllbar')
+
     </aside>
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
+
     <div class="control-sidebar-bg"></div>
+
 </div>
-<!-- ./wrapper -->
+
 
 @if(config('adminlte.script.mix'))
 
@@ -93,10 +115,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     @include('adminlte::js.app')
 
 @endif
 
 @yield('scripts')
+
 </body>
 </html>
