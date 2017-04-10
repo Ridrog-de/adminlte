@@ -3,6 +3,7 @@
 namespace Ridrog\AdminLte;
 
 use Illuminate\Support\ServiceProvider;
+use Ridrog\AdminLte\Console\MakeViewCommand;
 
 class AdminLteServiceProvider extends ServiceProvider
 {
@@ -22,6 +23,12 @@ class AdminLteServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/Views' => resource_path('views/vendor/adminlte'),
         ], 'adminlte-views');
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                MakeViewCommand::class,
+            ]);
+        }
     }
 
     /**

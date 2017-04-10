@@ -80,3 +80,17 @@ Switch skins, hide/display various sections
 - footer
 - sidebar-top
 - sidebar-bottom
+
+
+## Make a View
+
+There is a command for creating your own view.
+That view will extend the default adminlte layout and it will also include all possible sections and stacks.
+
+Options:
+- --basic  Creates a basic view 
+- --force  Force overwriting
+
+```
+php artisan make:view:adminlte path.to.nameoftheview
+```

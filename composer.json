@@ -3,6 +3,7 @@
   "description": "AdminLte for Laravel",
   "type": "package",
   "license": "MIT",
+  "version" : "0.0.1",
   "minimum-stability": "dev",
   "prefer-stable" : true,
   "require-dev": {
