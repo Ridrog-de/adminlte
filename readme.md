@@ -56,6 +56,14 @@ or extend the adminlte master template
 
 ```
 
+**Publish the Views**
+
+```
+php artisan vendor:publish --tag=adminlte-views
+
+```
+
+
 ## Customize
 
 **Publish the config**  
