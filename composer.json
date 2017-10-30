@@ -1,18 +1,46 @@
 {
   "name": "ridrog/adminlte",
-  "description": "AdminLte for Laravel",
+  "description": "AdminLte Template for Laravel",
   "type": "package",
   "license": "MIT",
-  "version" : "0.0.1",
+  "version" : "0.1.0",
   "minimum-stability": "dev",
   "prefer-stable" : true,
+  "require": {
+    "php": ">=7.0",
+    "laravel/framework": "^5.5"
+  },
   "require-dev": {
-    "almasaeed2010/adminlte": "^2.3"
+    "almasaeed2010/adminlte": "^2.3",
+    "orchestra/testbench": "~3.4.0",
+    "phpunit/phpunit" : "^5.7.5"
   },
   "autoload": {
     "psr-4": {
       "Ridrog\\AdminLte\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ridrog\\Boilerplate\\Test\\": "tests"
+    }
+  },
+  "extra" : {
+    "laravel" : {
+      "providers" : [
+        "Ridrog\\AdminLte\\AdminLteServiceProvider"
+      ],
+      "aliases" : {
+
+      }
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "testbench": "composer require --dev \"orchestra/testbench-browser-kit=~3.4\" \"orchestra/database=~3.4\""
+  },
+  "config": {
+    "sort-packages": true
   }
 
 }
