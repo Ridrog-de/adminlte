@@ -22,7 +22,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Ridrog\\Boilerplate\\Test\\": "tests"
+      "Ridrog\\AdminLte\\Test\\": "tests"
     }
   },
   "extra" : {
